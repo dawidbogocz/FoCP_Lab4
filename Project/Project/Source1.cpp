@@ -14,6 +14,9 @@ int main() {
 	std::cout << *ptr << std::endl;
 	*ptr = 25;
 	std::cout << variable << std::endl;
+	variable=15;
+	std::cout << *ptr << std::endl;
+
 
 	return 0;
 }

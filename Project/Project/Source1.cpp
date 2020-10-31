@@ -4,19 +4,21 @@
 
 int main() {
 
-	int variable = 7;
+	std::array<int,4> numbers;
 
-	int* ptr;
+	for (int i = 0; i < 4; i++) {
+		numbers[i] = i;
+	}
 
-	std::cout << ptr << std::endl;
+	//int step_size = &numbers[3] - &numbers[0];
+	//std::cout << step_size << std::endl;
 
-	ptr = &variable;
-	std::cout << *ptr << std::endl;
-	*ptr = 25;
-	std::cout << variable << std::endl;
-	variable=15;
-	std::cout << *ptr << std::endl;
+	int* ptr_numbers = &numbers[0];
 
+	for (int i = 0; i < 4; i++) {
+		std::cout << *ptr_numbers << std::endl;
+		++ptr_numbers;
+	}
 
 	return 0;
 }
